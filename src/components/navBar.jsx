@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
-import logo from './logo.svg';
+import logo from '../logo.svg'
 
-class Menu extends Component {
+class NavBar extends Component {
   state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -20,6 +20,7 @@ class Menu extends Component {
           name='feed'
           active={activeItem === 'feed'}
           onClick={this.handleItemClick}
+          href='/feed'
         >
           Feed
         </Menu.Item>
@@ -28,6 +29,7 @@ class Menu extends Component {
           name='card'
           active={activeItem === 'card'}
           onClick={this.handleItemClick}
+          href='/card'
         >
           Card
         </Menu.Item>
@@ -36,4 +38,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu
+export default NavBar
